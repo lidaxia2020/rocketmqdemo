@@ -8,9 +8,9 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.secusoft</groupId>
+    <groupId>com.lidaxia</groupId>
     <artifactId>image</artifactId>
-    <version>0.0.8-SNAPSHOT</version>
+    <version>0.0.9-SNAPSHOT</version>
     <name>mq2http</name>
     <description>图片处理</description>
     <properties>

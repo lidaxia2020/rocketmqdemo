@@ -1,4 +1,4 @@
-package com.secusoft.image;
+package com.lidaxia.image;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

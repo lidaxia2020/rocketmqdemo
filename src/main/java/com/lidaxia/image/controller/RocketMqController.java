@@ -1,7 +1,7 @@
-package com.secusoft.image.controller;
+package com.lidaxia.image.controller;
 
-import com.secusoft.image.component.RocketMqListener;
-import com.secusoft.image.component.RocketMqProducer;
+import com.lidaxia.image.component.RocketMqListener;
+import com.lidaxia.image.component.RocketMqProducer;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.SendResult;

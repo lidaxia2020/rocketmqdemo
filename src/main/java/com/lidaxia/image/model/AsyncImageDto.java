@@ -1,4 +1,4 @@
-package com.secusoft.image.model;
+package com.lidaxia.image.model;
 
 /**
  * @author lijiannan

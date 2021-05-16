@@ -1,4 +1,4 @@
-package com.secusoft.image.util;
+package com.lidaxia.image.util;
 
 import org.apache.http.*;
 import org.apache.http.client.HttpRequestRetryHandler;
