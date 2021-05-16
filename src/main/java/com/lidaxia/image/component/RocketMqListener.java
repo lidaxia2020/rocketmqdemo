@@ -43,9 +43,6 @@ public class RocketMqListener implements InitializingBean {
     private String topic;
 
 
-    @Value("${algorithm.url}")
-    private String algorithmUrl;
-
 
     @Value("${rocketmq.consumer:true}")
     private Boolean auto;
@@ -53,8 +50,6 @@ public class RocketMqListener implements InitializingBean {
     @Value("${rocketmq.consumer.name}")
     private String consumerGroup;
 
-    @Value("${rocketmq.algorithm.type}")
-    private String algorithmType;
 
     @Resource(name = "taskExecutor")
     private ThreadPoolTaskExecutor threadPoolTaskExecutor;
@@ -95,11 +90,16 @@ public class RocketMqListener implements InitializingBean {
             }
         });
 
-        //  mqInit();
+         //mqInit();
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
+        mqInit();
+
+    }
+
+    public void mqInit() throws MQClientException {
         logger.info("addr = {},consumerGroup={}, topic={}", addr, consumerGroup, topic);
 
         this.consumer = new MQPullConsumerScheduleService(this.consumerGroup);
@@ -155,7 +155,6 @@ public class RocketMqListener implements InitializingBean {
         } else {
             this.logger.info("rocketmq do not start");
         }
-
     }
 
     private void receive(String body) throws Exception {
